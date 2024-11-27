@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <style>
+            body {font-family: Arial, sans-serif;}
+.chatbox {width: 400px; height: 500px; broder: 1px solid #ccc; border-radius: 10px; display: flex; flex-direction: column; justify-content: space-between; margin: auto; padding: 10px;}
+.messages {flex-grow: 1; pverflow-y: auto; padding: 10px}
+.input-area {display: flex}
+.input-area input {flex-grow: 1; padding: 5px; border: 1px solid #ccc; border-radius: 5px}
+.input-area button {padding: 5px 10px; margin-left: 5px; border: none; background-color: #007bff; color: white; border-radius: 5px; cursor: pointer;}
+</style>
+</head>
+<body> 
+<div class="chatbox">
+<div class="messages' id="messages"></div>
+<div class="input-area">
+<input type="text" id="userInput" placeholder="Nhập câu hỏi của bạn...">
+<button onclick="sendMessage()">Gửi</button>
+</div>
+</div>
+<script>
+const message = document.getElementById("messages");
+function sendMessage() {const userInput = document.getElementById("userInput").value; 
+if (!unserInput) return;
+// Hiển thị tin nhắn người dùng
+const userMessage = document.createElement("div");
+userMessage.textContent = "Người dùng: " + userInput;
+messages.appendChild(botMessage);
+// Phản hồi tự động
+const botMessage = document.createElement("div");
+ botMessage.textContent = "Chatbox: Cảm ơn bạn đã hỏi, tôi sẽ trả lời ngay!";
+messages.appendChild(botMessage);
+// Làm sạch ô nhập dữ liệu
+document.getElementById("userInput").value = "";}
+</script>
+</body>
+</html>
